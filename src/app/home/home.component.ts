@@ -1,12 +1,15 @@
-import {Component, NgModule} from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {HousingLocationComponent} from "../housing-location/housing-location.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HousingLocationComponent],
-  template: `
+  imports: [
+    CommonModule,
+    HousingLocationComponent
+  ],
+  template:`
     <section>
       <form>
         <input type="text" placeholder="Filter by city">
@@ -18,12 +21,6 @@ import {HousingLocationComponent} from "../housing-location/housing-location.com
     </section>
   `,
   styleUrls: ['./home.component.css']
-})
-@NgModule({
-  imports: [
-    CommonModule,
-    HousingLocationComponent
-  ],
 })
 export class HomeComponent {
 
