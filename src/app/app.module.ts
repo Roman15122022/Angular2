@@ -10,7 +10,7 @@ import {HomeComponent} from "./home/home.component";
   ],
   imports: [
     BrowserModule,
-    HomeComponent
+    HomeComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
