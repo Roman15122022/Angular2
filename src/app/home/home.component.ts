@@ -21,7 +21,7 @@ import { HousingService } from "../housing.service";
     <section class="results">
       <app-housing-location
         *ngFor="let housingLocation of housingLocationList"
-        [housingLocation] = "housingLocation">
+        [housingLocation]="housingLocation">
       </app-housing-location>
     </section>
   `,
@@ -29,11 +29,12 @@ import { HousingService } from "../housing.service";
 })
 export class HomeComponent {
   readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
-
   housingLocationList: HousingLocation[] = [];
   housingService: HousingService = inject(HousingService);
 
   constructor() {
     this.housingLocationList = this.housingService.getAllHousingLocations();
   }
+
+
 }
